@@ -1,0 +1,12 @@
+
+.navbar-vertical .navbar-nav .nav-item .nav-link {
+    color: #21262a !important;
+}
+
+.navbar-vertical .navbar-nav .nav-item .nav-link.active {
+    color: #5d686f !important;
+}
+
+.navbar .navbar-nav .nav-item .nav-link:hover {
+    color: #dfdfd8 !important;
+}
