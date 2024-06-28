@@ -37,6 +37,7 @@
     </a>
     <!-- Navbar nav -->
     <ul class="navbar-nav flex-column" id="sideNavbar">
+      
 
     <li class="nav-item">
         <div class="nav-divider"></div>
@@ -47,14 +48,15 @@
       </li>  -->
 
       <!-- Nav item -->
+      <!-- Nav item -->
       <li class="nav-item">
-        <a class="nav-link active" href="dashboard.html">
+        <a class="nav-link" href="dashboard.html">
           Tax Home
         </a>
       </li>
     
       <li class="nav-item">
-        <a class="nav-link " href="refund.html">
+        <a class="nav-link active" href="refund.html">
           Finish &amp; file
         </a>
       </li>
@@ -78,6 +80,7 @@
           Wallet
         </a>
       </li>
+
      <!-- End Nav item -->
       
     </ul>
@@ -268,7 +271,7 @@
                        
                         <div class="border-bottom pb-3 d-md-flex align-items-center justify-content-between mb-3">
                             <div class="mb-2 mb-lg-0">
-                                <h1 class="mb-0 h2 fw-bold">Welcome 👋, Ugochukwu</h1>
+                                <h1 class="mb-0 h2 fw-bold">Your Tax Refund Summary</h1>
                             </div>
                             
                         </div>
@@ -276,38 +279,40 @@
                 </div>
             </section>
 
-            <!-- Goals Dashboard -->
-            <section id="goals-dashboard" class="container">
-                <div class="row">
-                    <div class="col-md-4 mb-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Retirement</h5>
-                                <p class="card-text">Save $500,000 by 2050</p>
-                                <a href="goaldetail.html" class="btn btn-primary">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">College Tuition</h5>
-                                <p class="card-text">Save $100,000 by 2030</p>
-                                <a href="goaldetail.html" class="btn btn-primary">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">New Goal</h5>
-                                <p class="card-text">Click to add a new financial goal</p>
-                                <a href="creategoals.html" class="btn btn-success">Add Goal</a>
-                            </div>
+            <!-- Refund Summary -->
+<section id="refund-summary" class="container">
+    
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title text-center">Congratulations!</h2>
+            <p class="card-text text-center fs-4">Your estimated tax refund is:</p>
+            <p class="text-center display-4 text-success">$2,500</p>
+            <hr>
+            <h3>What would you like to do with your refund?</h3>
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <div class="card mb-3 border">
+                        <div class="card-body">
+                            <h5 class="card-title">Direct Deposit to Bank</h5>
+                            <p class="card-text">Get your refund deposited directly to your bank account.</p>
+                            <a href="#" class="btn btn-outline-primary">Choose This Option</a>
                         </div>
                     </div>
                 </div>
-            </section>
+                <div class="col-md-6">
+                    <div class="card mb-3 border">
+                        <div class="card-body">
+                            <h5 class="card-title">Add to TurboTax Wallet</h5>
+                            <p class="card-text">Fund your financial goals and earn bonus rewards!</p>
+                            <a href="addtowallet.html" class="btn btn-primary">Add to Wallet</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
     </main>
 </div>

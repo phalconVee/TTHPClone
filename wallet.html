@@ -37,30 +37,23 @@
     </a>
     <!-- Navbar nav -->
     <ul class="navbar-nav flex-column" id="sideNavbar">
+      
 
     <li class="nav-item">
         <div class="nav-divider"></div>
     </li>
-     
-      <!-- <li class="nav-item">
-        <div class="navbar-heading">Apps</div>
-      </li>  -->
 
       <!-- Nav item -->
       <li class="nav-item">
-        <a class="nav-link active" href="dashboard.html">
+        <a class="nav-link" href="dashboard.html">
           Tax Home
         </a>
       </li>
-    
+      
       <li class="nav-item">
         <a class="nav-link " href="refund.html">
           Finish &amp; file
         </a>
-      </li>
-
-      <li class="nav-item">
-        <div class="nav-divider"></div>
       </li>
 
       <li class="nav-item">
@@ -74,7 +67,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="wallet.html">
+        <a class="nav-link active" href="wallet.html">
           Wallet
         </a>
       </li>
@@ -268,7 +261,7 @@
                        
                         <div class="border-bottom pb-3 d-md-flex align-items-center justify-content-between mb-3">
                             <div class="mb-2 mb-lg-0">
-                                <h1 class="mb-0 h2 fw-bold">Welcome 👋, Ugochukwu</h1>
+                                <h1 class="mb-0 h2 fw-bold">TurboTax Wallet</h1>
                             </div>
                             
                         </div>
@@ -276,54 +269,235 @@
                 </div>
             </section>
 
-            <!-- Goals Dashboard -->
-            <section id="goals-dashboard" class="container">
-                <div class="row">
-                    <div class="col-md-4 mb-3">
+            <div class="container" id="turbotax-wallet-dashboard">
+               
+                <div class="row mb-4">
+                    <div class="col-md-6">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">Retirement</h5>
-                                <p class="card-text">Save $500,000 by 2050</p>
-                                <a href="goaldetail.html" class="btn btn-primary">View Details</a>
+                                <h2 class="card-title">Wallet Balance</h2>
+                                <h3 class="text-primary">$3,275.50</h3>
+                                <p class="text-muted">Last updated: June 28, 2024, 10:15 AM</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-3">
+                    <div class="col-md-6">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">College Tuition</h5>
-                                <p class="card-text">Save $100,000 by 2030</p>
-                                <a href="goaldetail.html" class="btn btn-primary">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">New Goal</h5>
-                                <p class="card-text">Click to add a new financial goal</p>
-                                <a href="creategoals.html" class="btn btn-success">Add Goal</a>
+                                <h2 class="card-title">Quick Actions</h2>
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addFundsModal">Add Funds</button>
+                                    <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#withdrawFundsModal">Withdraw Funds</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            
+                <!-- Recent Transactions -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title">Recent Transactions</h2>
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Description</th>
+                                        <th>Amount</th>
+                                        <th>Balance</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>June 28, 2024</td>
+                                        <td>Tax Refund Deposit</td>
+                                        <td class="text-success">+$2,575.00</td>
+                                        <td>$3,275.50</td>
+                                    </tr>
+                                    <tr>
+                                        <td>June 25, 2024</td>
+                                        <td>Transfer to Retirement Goal</td>
+                                        <td class="text-danger">-$500.00</td>
+                                        <td>$700.50</td>
+                                    </tr>
+                                    <tr>
+                                        <td>June 20, 2024</td>
+                                        <td>Interest Earned</td>
+                                        <td class="text-success">+$0.50</td>
+                                        <td>$1,200.50</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <a href="#" class="btn btn-link">View All Transactions</a>
+                    </div>
+                </div>
+            
+                <!-- Linked Goals -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title">Linked Financial Goals</h2>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Retirement</h5>
+                                        <div class="progress mb-3">
+                                            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                        </div>
+                                        <p class="card-text">Current: $125,500 / Target: $500,000</p>
+                                        <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#fundGoalModal" data-goal="Retirement">Fund Goal</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">College Tuition</h5>
+                                        <div class="progress mb-3">
+                                            <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">40%</div>
+                                        </div>
+                                        <p class="card-text">Current: $40,000 / Target: $100,000</p>
+                                        <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#fundGoalModal" data-goal="College Tuition">Fund Goal</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-link">Manage Goals</a>
+                    </div>
+                </div>
+            
+                <!-- Savings Recommendations -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title">Savings Recommendations</h2>
+                        <p>Based on your current wallet balance and goals, here are some recommendations:</p>
+                        <ul>
+                            <li>Consider moving $2,000 to a high-yield savings account (3.5% APY)</li>
+                            <li>Increase your monthly contribution to your Retirement goal by $100</li>
+                            <li>Set up automatic transfers to your College Tuition goal</li>
+                        </ul>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#savingsRecommendationsModal">View Detailed Recommendations</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Add Funds Modal -->
+            <div class="modal fade" id="addFundsModal" tabindex="-1" aria-labelledby="addFundsModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="addFundsModalLabel">Add Funds to Wallet</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="addAmount" class="form-label">Amount to Add</label>
+                                    <input type="number" class="form-control" id="addAmount" min="1" step="0.01" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="fundingSource" class="form-label">Funding Source</label>
+                                    <select class="form-select" id="fundingSource" required>
+                                        <option value="">Select a funding source</option>
+                                        <option value="bankAccount">Bank Account (ending in 1234)</option>
+                                        <option value="debitCard">Debit Card (ending in 5678)</option>
+                                        <option value="creditCard">Credit Card (ending in 9012)</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary">Add Funds</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Withdraw Funds Modal -->
+            <div class="modal fade" id="withdrawFundsModal" tabindex="-1" aria-labelledby="withdrawFundsModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="withdrawFundsModalLabel">Withdraw Funds from Wallet</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="withdrawAmount" class="form-label">Amount to Withdraw</label>
+                                    <input type="number" class="form-control" id="withdrawAmount" min="1" max="3275.50" step="0.01" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="withdrawDestination" class="form-label">Withdrawal Destination</label>
+                                    <select class="form-select" id="withdrawDestination" required>
+                                        <option value="">Select a destination</option>
+                                        <option value="bankAccount">Bank Account (ending in 1234)</option>
+                                        <option value="debitCard">Debit Card (ending in 5678)</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary">Withdraw Funds</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Fund Goal Modal -->
+            <div class="modal fade" id="fundGoalModal" tabindex="-1" aria-labelledby="fundGoalModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="fundGoalModalLabel">Fund Goal</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="goalName" class="form-label">Goal</label>
+                                    <input type="text" class="form-control" id="goalName" readonly>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="fundAmount" class="form-label">Amount to Fund</label>
+                                    <input type="number" class="form-control" id="fundAmount" min="1" max="3275.50" step="0.01" required>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary">Fund Goal</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
     </main>
 </div>
 
-        
+<script>
+    // Populate goal name in Fund Goal modal
+    var fundGoalModal = document.getElementById('fundGoalModal')
+    fundGoalModal.addEventListener('show.bs.modal', function (event) {
+      var button = event.relatedTarget
+      var goalName = button.getAttribute('data-goal')
+      var modalTitle = fundGoalModal.querySelector('.modal-title')
+      var goalNameInput = fundGoalModal.querySelector('#goalName')
+    
+      modalTitle.textContent = 'Fund ' + goalName + ' Goal'
+      goalNameInput.value = goalName
+    })
+</script>
+
 <script src="assets/libs/@popperjs/core/dist/umd/popper.min.js"></script>
 <script src="assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="assets/libs/simplebar/dist/simplebar.min.js"></script>
 
 <script src="assets/js/theme.min.js"></script>
-
-<script src="assets/libs/dropzone/dist/min/dropzone.min.js"></script>
-<script src="assets/libs/flatpickr/dist/flatpickr.min.js"></script>
-<script src="assets/js/vendors/flatpickr.js"></script>
-<script src="assets/js/vendors/validation.js"></script>
-<script src="assets/js/vendors/dropzone.js"></script>
 
 </body>
 </html>

@@ -4,7 +4,8 @@
 }
 
 .navbar-vertical .navbar-nav .nav-item .nav-link.active {
-    color: #5d686f !important;
+    /* color: #5d686f !important; */
+    color: #d52b1e !important;
 }
 
 .navbar .navbar-nav .nav-item .nav-link:hover {

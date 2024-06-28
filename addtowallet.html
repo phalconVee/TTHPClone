@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="assets/libs/flatpickr/dist/flatpickr.min.css" />
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="author" content="Henry Ugochukwu" />
+
+        <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon/favicon.ico" />
+
+
+        <link href="assets/fonts/feather/feather.css" rel="stylesheet" />
+        <link href="assets/libs/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
+        <link href="assets/libs/simplebar/dist/simplebar.min.css" rel="stylesheet" />
+
+        <!-- Theme CSS -->
+        <link rel="stylesheet" href="assets/css/theme.min.css">
+        <link rel="stylesheet" href="assets/css/custom.css">
+
+       
+        <title>TurboTax Online</title>
+    </head>
+
+    <body>
+        <!-- Wrapper -->
+        <div id="db-wrapper">
+            <!-- navbar vertical -->
+            <!-- Sidebar -->
+<nav class="navbar-vertical navbar">
+  <div class="vh-100" data-simplebar>
+    <!-- Brand logo -->
+    <a class="navbar-brand" href="/">
+      <img src="assets/images/tt-logo-50-50-color.svg" height="100" width="100" alt="TurboTax"/>
+    </a>
+    <!-- Navbar nav -->
+    <ul class="navbar-nav flex-column" id="sideNavbar">
+      
+
+        <li class="nav-item">
+            <div class="nav-divider"></div>
+        </li>
+     
+       <!-- Nav item -->
+       <li class="nav-item">
+        <a class="nav-link" href="dashboard.html">
+          Tax Home
+        </a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link " href="refund.html">
+          Finish &amp; file
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <div class="nav-divider"></div>
+      </li>
+
+      <li class="nav-item">
+        <div class="navbar-heading">New Feature</div>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link " href="goals.html">
+          Goals
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link active" href="wallet.html">
+          Wallet
+        </a>
+      </li>
+
+     <!-- End Nav item -->
+      
+    </ul>
+  </div>
+</nav>
+
+            <!-- Page Content -->
+            <main id="page-content">
+                <div class="header">
+    <!-- navbar -->
+    <nav class="navbar-default navbar navbar-expand-lg">
+        <a id="nav-toggle" href="#">
+            <i class="fe fe-menu"></i>
+        </a>
+        <div class="ms-lg-3 d-none d-md-none d-lg-block">
+            <!-- Form -->
+            <form class="d-flex align-items-center">
+                <span class="position-absolute ps-3 search-icon">
+                    <i class="fe fe-search"></i>
+                </span>
+                <input type="search" class="form-control ps-6" placeholder="Search Tax Tips" />
+            </form>
+        </div>
+        <!--Navbar nav -->
+        <div class="ms-auto d-flex">
+            
+            <ul class="navbar-nav navbar-right-wrap ms-2 d-flex nav-top-wrap">
+                <li class="dropdown stopevent">
+                    <a
+                        class="btn btn-light btn-icon rounded-circle indicator indicator-primary"
+                        href="#"
+                        role="button"
+                        id="dropdownNotification"
+                        data-bs-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false">
+                        <i class="fe fe-bell"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-lg" aria-labelledby="dropdownNotification">
+                        <div>
+                            <div class="border-bottom px-3 pb-3 d-flex justify-content-between align-items-center">
+                                <span class="h4 mb-0">Notifications</span>
+                                <a href="# ">
+                                    <span class="align-middle">
+                                        <i class="fe fe-settings me-1"></i>
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- List group -->
+                            <ul class="list-group list-group-flush" data-simplebar style="max-height: 300px">
+                                <li class="list-group-item bg-light">
+                                    <div class="row">
+                                        <div class="col">
+                                            <a class="text-body" href="#">
+                                                <div class="d-flex">
+                                                   
+                                                    <div class="ms-3">
+                                                        <h5 class="fw-bold mb-1">Federal Reserve</h5>
+                                                        <p class="mb-3">Wanted to lorem ipsum lorem ipsum lorem ipsum lorem ipsum.</p>
+                                                        <span class="fs-6">
+                                                            <span>
+                                                                <span class="fe fe-thumbs-up text-success me-1"></span>
+                                                                2 hours ago,
+                                                            </span>
+                                                            <span class="ms-1">2:19 PM</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-auto text-center me-2">
+                                            <a href="#" class="badge-dot bg-info" data-bs-toggle="tooltip" data-bs-placement="top" title="Mark as read"></a>
+                                            <div>
+                                                <a href="#" class="bg-transparent" data-bs-toggle="tooltip" data-bs-placement="top" title="Remove">
+                                                    <i class="fe fe-x"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="row">
+                                        <div class="col">
+                                            <a class="text-body" href="#">
+                                                <div class="d-flex">
+                        
+                                                    <div class="ms-3">
+                                                        <h5 class="fw-bold mb-1">TurboTax Support</h5>
+                                                        <p class="mb-3">Wanted to lorem ipsum lorem ipsum lorem ipsum lorem ipsum.</p>
+                                                        <span class="fs-6">
+                                                            <span>
+                                                                <span class="fe fe-thumbs-up text-success me-1"></span>
+                                                                Oct 9,
+                                                            </span>
+                                                            <span class="ms-1">1:20 PM</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-auto text-center me-2">
+                                            <a href="#" class="badge-dot bg-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Mark as unread"></a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="row">
+                                        <div class="col">
+                                            <a class="text-body" href="#">
+                                                <div class="d-flex">
+                                                    
+                                                    <div class="ms-3">
+                                                        <h5 class="fw-bold mb-1">Found Deductions</h5>
+                                                        <p class="mb-3">Wanted to lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+                                                        <span class="fs-6">
+                                                            <span>
+                                                                <span class="fe fe-thumbs-up text-info me-1"></span>
+                                                                Oct 9,
+                                                            </span>
+                                                            <span class="ms-1">1:56 PM</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-auto text-center me-2">
+                                            <a href="#" class="badge-dot bg-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Mark as unread"></a>
+                                        </div>
+                                    </div>
+                                </li>
+                                
+                            </ul>
+                            <div class="border-top px-3 pt-3 pb-0">
+                                <a href="#" class="text-link fw-semibold">See all Notifications</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!-- List -->
+                <li class="dropdown ms-2">
+                    <a class="rounded-circle" href="#" role="button" id="dropdownUser" data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="avatar avatar-md avatar-indicators avatar-online">
+                            <img alt="avatar" src="assets/images/avatar/avatar-1.jpg" class="rounded-circle" />
+                        </div>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownUser">
+                        
+                        <ul class="list-unstyled">
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fe fe-user me-2"></i>
+                                    Intuit Account
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="../../pages/student-subscriptions.html">
+                                    <i class="fe fe-star me-2"></i>
+                                    File an Extension
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fe fe-settings me-2"></i>
+                                    Do my taxes for me
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="dropdown-divider"></div>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a class="dropdown-item" href="../../index.html">
+                                    <i class="fe fe-power me-2"></i>
+                                    Sign Out
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+            <!-- Container fluid -->
+            <section class="container-fluid p-4">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-12">
+                       
+                        <div class="border-bottom pb-3 d-md-flex align-items-center justify-content-between mb-3">
+                            <div class="mb-2 mb-lg-0">
+                                <h1 class="mb-0 h2 fw-bold">Add to Wallet</h1>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        <div id="wallet-workflow" class="container">
+            <!-- TurboTax Wallet Introduction -->
+            <section id="add-to-wallet" class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Benefits of TurboTax Wallet</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <i class="bi bi-piggy-bank-fill text-primary me-2"></i>
+                                Easily fund your financial goals
+                            </li>
+                            <li class="list-group-item">
+                                <i class="bi bi-graph-up-arrow text-primary me-2"></i>
+                                Earn 3% bonus on your refund amount
+                            </li>
+                            <li class="list-group-item">
+                                <i class="bi bi-shield-check text-primary me-2"></i>
+                                Secure and FDIC insured
+                            </li>
+                            <li class="list-group-item">
+                                <i class="bi bi-arrow-left-right text-primary me-2"></i>
+                                Transfer funds to your goals anytime
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title">Add Your Refund to TurboTax Wallet</h3>
+                                <p class="card-text">Your refund amount: $2,500</p>
+                                <p class="card-text text-success">Bonus amount (3%): $75</p>
+                                <p class="card-text fw-bold">Total to be added: $2,575</p>
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" id="termsCheck" required>
+                                    <label class="form-check-label" for="termsCheck">
+                                        I agree to the TurboTax Wallet terms and conditions
+                                    </label>
+                                </div>
+                                <button id="confirmAddToWallet" class="btn btn-primary">Add to TurboTax Wallet</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Step 2: Fund Goals -->
+    <section id="fund-goals" class="mb-5" style="display: none;">
+        <div class="alert alert-success" role="alert">
+            <p class="mb-0">Your refund has been added to your TurboTax Wallet. Total balance: <strong>$2,575</strong></p>
+        </div>
+        <p>Allocate your funds to your financial goals:</p>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Retirement</h5>
+                        <p class="card-text">Current progress: $125,000 / $500,000</p>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">$</span>
+                            <input type="number" class="form-control" id="retirementAmount" placeholder="Amount to add">
+                        </div>
+                        <!-- <button class="btn btn-primary fund-goal" data-goal="retirement">Add to Retirement</button> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">College Tuition</h5>
+                        <p class="card-text">Current progress: $20,000 / $100,000</p>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">$</span>
+                            <input type="number" class="form-control" id="tuitionAmount" placeholder="Amount to add">
+                        </div>
+                        <!-- <button class="btn btn-primary fund-goal" data-goal="tuition">Add to College Tuition</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button id="confirmFunding" class="btn btn-success mt-3">Confirm Goal Funding</button>
+    </section>
+
+    <!-- Step 3: Success Screen -->
+    <section id="funding-success" class="mb-5" style="display: none;">
+        <div class="card border-success">
+            <div class="card-body text-center">
+                <h2 class="card-title text-success">Goals Funded Successfully!</h2>
+                <p class="card-text">Your goals have been funded with the allocated amounts.</p>
+                <div id="fundingDetails" class="mt-4">
+                    <!-- Funding details will be inserted here dynamically -->
+                </div>
+                <p class="mt-4">Remaining balance in TurboTax Wallet: $<span id="remainingBalance"></span></p>
+                <a href="dashboard.html" class="btn btn-primary mt-3">Go to Goals Dashboard</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Step 4: Generate More Interest -->
+    <section id="generate-interest" class="mb-5" style="display: none;">
+        <h2 class="mb-4">Boost Your Savings</h2>
+        <p>Here are some options to potentially earn more interest on your goal funds:</p>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">High-Yield Savings Account</h5>
+                        <p class="card-text">Current APY: 3.5%</p>
+                        <p class="card-text">FDIC Insured</p>
+                        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#highYieldModal">Learn More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Certificate of Deposit (CD)</h5>
+                        <p class="card-text">12-month APY: 4.0%</p>
+                        <p class="card-text">FDIC Insured</p>
+                        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#cdModal">Learn More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Investment Options</h5>
+                        <p class="card-text">Potential for higher returns</p>
+                        <p class="card-text">Involves market risk</p>
+                        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#investmentModal">Explore Options</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-4">
+            <p>
+                <strong>Note: Always consider your financial goals, risk tolerance, and time horizon when choosing savings or investment options.</strong>
+            </p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#consultationModal">Schedule a Consultation</button>
+        </div>
+    </section>
+
+
+    <!-- High-Yield Savings Account Modal -->
+<div class="modal fade" id="highYieldModal" tabindex="-1" aria-labelledby="highYieldModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="highYieldModalLabel">High-Yield Savings Account</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h6>Features:</h6>
+                <ul>
+                    <li>3.5% Annual Percentage Yield (APY)</li>
+                    <li>FDIC insured up to $250,000</li>
+                    <li>No minimum balance required</li>
+                    <li>Easy access to your funds</li>
+                    <li>Mobile banking available</li>
+                </ul>
+                <h6>Is this right for you?</h6>
+                <p>A high-yield savings account is ideal if you want to earn more interest than a traditional savings account while maintaining easy access to your money. It's great for emergency funds or short-term savings goals.</p>
+                <h6>Potential earnings:</h6>
+                <div class="mb-3">
+                    <label for="highYieldAmount" class="form-label">Enter amount to calculate potential earnings:</label>
+                    <input type="number" class="form-control" id="highYieldAmount" placeholder="Enter amount">
+                </div>
+                <p>Potential earnings after 1 year: $<span id="highYieldEarnings">0.00</span></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Open Account</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Certificate of Deposit (CD) Modal -->
+<div class="modal fade" id="cdModal" tabindex="-1" aria-labelledby="cdModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cdModalLabel">Certificate of Deposit (CD)</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h6>Features:</h6>
+                <ul>
+                    <li>4.0% Annual Percentage Yield (APY) for 12-month term</li>
+                    <li>FDIC insured up to $250,000</li>
+                    <li>Minimum deposit: $1,000</li>
+                    <li>Fixed interest rate for the term</li>
+                    <li>Penalty for early withdrawal</li>
+                </ul>
+                <h6>Is this right for you?</h6>
+                <p>A CD is ideal if you have a lump sum you won't need for a specific period and want to earn a higher, guaranteed interest rate. It's great for medium-term savings goals.</p>
+                <h6>Potential earnings:</h6>
+                <div class="mb-3">
+                    <label for="cdAmount" class="form-label">Enter amount to calculate potential earnings:</label>
+                    <input type="number" class="form-control" id="cdAmount" placeholder="Enter amount (minimum $1,000)">
+                </div>
+                <p>Potential earnings after 12 months: $<span id="cdEarnings">0.00</span></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Open CD Account</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Investment Options Modal -->
+<div class="modal fade" id="investmentModal" tabindex="-1" aria-labelledby="investmentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="investmentModalLabel">Investment Options</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h6>Available Options:</h6>
+                <ul>
+                    <li>Mutual Funds</li>
+                    <li>Exchange-Traded Funds (ETFs)</li>
+                    <li>Individual Stocks</li>
+                    <li>Bonds</li>
+                </ul>
+                <h6>Is this right for you?</h6>
+                <p>Investing in the market can potentially offer higher returns but comes with higher risk. It's generally suitable for long-term goals and those comfortable with market fluctuations.</p>
+                <div class="alert alert-warning" role="alert">
+                    <strong>Important:</strong> Investments are subject to market risks. Past performance does not guarantee future results.
+                </div>
+                <p>For personalized investment advice, please schedule a consultation with our financial advisors.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#consultationModal">Schedule Consultation</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Consultation Modal -->
+<div class="modal fade" id="consultationModal" tabindex="-1" aria-labelledby="consultationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="consultationModalLabel">Schedule a Free Consultation</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="consultName" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="consultName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="consultEmail" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="consultEmail" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="consultPhone" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="consultPhone">
+                    </div>
+                    <div class="mb-3">
+                        <label for="consultDate" class="form-label">Preferred Date</label>
+                        <input type="date" class="form-control" id="consultDate" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="consultTime" class="form-label">Preferred Time</label>
+                        <select class="form-select" id="consultTime" required>
+                            <option value="">Choose a time</option>
+                            <option value="morning">Morning (9AM - 12PM)</option>
+                            <option value="afternoon">Afternoon (1PM - 5PM)</option>
+                            <option value="evening">Evening (6PM - 8PM)</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Schedule Consultation</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- End Modal -->
+
+        </div>
+    </main>
+</div>
+
+<script>
+    document.getElementById('confirmAddToWallet').addEventListener('click', function() {
+        document.getElementById('add-to-wallet').style.display = 'none';
+        document.getElementById('fund-goals').style.display = 'block';
+    });
+    
+    document.getElementById('confirmFunding').addEventListener('click', function() {
+        // In a real application, you would calculate these values based on user input
+        const retirementAmount = document.getElementById('retirementAmount').value || 0;
+        const tuitionAmount = document.getElementById('tuitionAmount').value || 0;
+        const totalFunded = parseFloat(retirementAmount) + parseFloat(tuitionAmount);
+        const remainingBalance = 2575 - totalFunded;
+    
+        document.getElementById('fundingDetails').innerHTML = `
+            <p>Retirement Goal: $${retirementAmount}</p>
+            <p>College Tuition Goal: $${tuitionAmount}</p>
+        `;
+        document.getElementById('remainingBalance').textContent = remainingBalance.toFixed(2);
+    
+        document.getElementById('fund-goals').style.display = 'none';
+        document.getElementById('funding-success').style.display = 'block';
+        document.getElementById('generate-interest').style.display = 'block';
+    });
+
+    // Calculate potential earnings for High-Yield Savings Account
+    document.getElementById('highYieldAmount').addEventListener('input', function() {
+        const amount = parseFloat(this.value) || 0;
+        const earnings = amount * 0.035;
+        document.getElementById('highYieldEarnings').textContent = earnings.toFixed(2);
+    });
+
+    // Calculate potential earnings for CD
+    document.getElementById('cdAmount').addEventListener('input', function() {
+        const amount = parseFloat(this.value) || 0;
+        const earnings = amount * 0.04;
+        document.getElementById('cdEarnings').textContent = earnings.toFixed(2);
+    });
+</script>
+
+<script src="assets/libs/@popperjs/core/dist/umd/popper.min.js"></script>
+<script src="assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="assets/libs/simplebar/dist/simplebar.min.js"></script>
+
+<script src="assets/js/theme.min.js"></script>
+
+</body>
+</html>

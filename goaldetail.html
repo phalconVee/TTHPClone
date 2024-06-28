@@ -37,6 +37,7 @@
     </a>
     <!-- Navbar nav -->
     <ul class="navbar-nav flex-column" id="sideNavbar">
+      
 
     <li class="nav-item">
         <div class="nav-divider"></div>
@@ -48,7 +49,7 @@
 
       <!-- Nav item -->
       <li class="nav-item">
-        <a class="nav-link active" href="dashboard.html">
+        <a class="nav-link" href="dashboard.html">
           Tax Home
         </a>
       </li>
@@ -68,7 +69,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link " href="goals.html">
+        <a class="nav-link active" href="goals.html">
           Goals
         </a>
       </li>
@@ -78,7 +79,7 @@
           Wallet
         </a>
       </li>
-     <!-- End Nav item -->
+
       
     </ul>
   </div>
@@ -261,53 +262,112 @@
     </nav>
 </div>
 
-            <!-- Container fluid -->
-            <section class="container-fluid p-4">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-12">
-                       
-                        <div class="border-bottom pb-3 d-md-flex align-items-center justify-content-between mb-3">
-                            <div class="mb-2 mb-lg-0">
-                                <h1 class="mb-0 h2 fw-bold">Welcome 👋, Ugochukwu</h1>
-                            </div>
-                            
-                        </div>
-                    </div>
+           
+<!-- Container fluid -->
+<section class="container-fluid p-4">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-12">
+           
+            <div class="border-bottom pb-3 d-md-flex align-items-center justify-content-between mb-3">
+                <div class="mb-2 mb-lg-0">
+                    <h1 class="mb-0 h2 fw-bold">Goal Details: Retirement</h1>
                 </div>
-            </section>
+                
+            </div>
+        </div>
+    </div>
+</section>
 
-            <!-- Goals Dashboard -->
-            <section id="goals-dashboard" class="container">
-                <div class="row">
-                    <div class="col-md-4 mb-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Retirement</h5>
-                                <p class="card-text">Save $500,000 by 2050</p>
-                                <a href="goaldetail.html" class="btn btn-primary">View Details</a>
-                            </div>
-                        </div>
+        <!-- Goal Details -->
+<section id="goal-details" class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h3 class="card-title">Progress Overview</h3>
+                    <div class="progress mb-3">
+                        <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
                     </div>
-                    <div class="col-md-4 mb-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">College Tuition</h5>
-                                <p class="card-text">Save $100,000 by 2030</p>
-                                <a href="goaldetail.html" class="btn btn-primary">View Details</a>
-                            </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p><strong>Current savings:</strong> $125,000</p>
+                            <p><strong>Target amount:</strong> $500,000</p>
                         </div>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">New Goal</h5>
-                                <p class="card-text">Click to add a new financial goal</p>
-                                <a href="creategoals.html" class="btn btn-success">Add Goal</a>
-                            </div>
+                        <div class="col-sm-6">
+                            <p><strong>Target date:</strong> 2050</p>
+                            <p><strong>Years remaining:</strong> 26</p>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+            
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h3 class="card-title">Savings Breakdown</h3>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            401(k)
+                            <span class="badge bg-primary rounded-pill">$80,000</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            IRA
+                            <span class="badge bg-primary rounded-pill">$30,000</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Taxable Investments
+                            <span class="badge bg-primary rounded-pill">$15,000</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h3 class="card-title">Projected Growth</h3>
+                    <canvas id="growthChart"></canvas>
+                    <p class="mt-3"><small class="text-muted">Assumes 7% annual return and continued contributions</small></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h3 class="card-title">Tax-Saving Recommendations</h3>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <h5>Maximize 401(k) contributions</h5>
+                            <p>Increase your contributions to reach the annual limit of $20,500 (2024 limit).</p>
+                            <p><strong>Potential tax savings:</strong> $4,510 (assuming 22% tax bracket)</p>
+                        </li>
+                        <li class="list-group-item">
+                            <h5>Consider a Roth IRA</h5>
+                            <p>Open and contribute to a Roth IRA for tax-free growth and withdrawals in retirement.</p>
+                            <p><strong>Potential benefit:</strong> Tax-free withdrawals in retirement</p>
+                        </li>
+                        <li class="list-group-item">
+                            <h5>Explore tax-efficient investments</h5>
+                            <p>Consider index funds or ETFs in your taxable account for better tax efficiency.</p>
+                            <p><strong>Potential benefit:</strong> Reduced capital gains taxes</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Next Steps</h3>
+                    <ol class="list-group list-group-numbered">
+                        <li class="list-group-item">Review and adjust monthly contributions</li>
+                        <li class="list-group-item">Schedule a meeting with a financial advisor</li>
+                        <li class="list-group-item">Update beneficiary information</li>
+                    </ol>
+                    <a href="#" class="btn btn-primary mt-3">Update Goal</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     </main>
 </div>

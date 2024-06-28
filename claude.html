@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TurboTax Goals Feature</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">TurboTax</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#goals-dashboard">Goals Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#create-goal">Create Goal</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section id="generate-interest" class="container mt-5">
+    <h2 class="mb-4">Boost Your Savings</h2>
+    <p>Explore these options to potentially earn more interest on your goal funds:</p>
+
+    <!-- Interest Options Cards -->
+    <div class="row mb-4">
+        <div class="col-md-4 mb-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">High-Yield Savings Account</h5>
+                    <p class="card-text">Current APY: 3.5%</p>
+                    <p class="card-text">FDIC Insured</p>
+                    <p class="card-text">No minimum balance</p>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#highYieldModal">Learn More</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Certificate of Deposit (CD)</h5>
+                    <p class="card-text">12-month APY: 4.0%</p>
+                    <p class="card-text">FDIC Insured</p>
+                    <p class="card-text">Minimum deposit: $1,000</p>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cdModal">Learn More</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Investment Options</h5>
+                    <p class="card-text">Potential for higher returns</p>
+                    <p class="card-text">Involves market risk</p>
+                    <p class="card-text">Various options available</p>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#investmentModal">Explore Options</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="alert alert-info" role="alert">
+        <strong>Note:</strong> Always consider your financial goals, risk tolerance, and time horizon when choosing savings or investment options.
+    </div>
+
+    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#consultationModal">Schedule a Free Consultation</button>
+</section>
+
+<!-- High-Yield Savings Account Modal -->
+<div class="modal fade" id="highYieldModal" tabindex="-1" aria-labelledby="highYieldModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="highYieldModalLabel">High-Yield Savings Account</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h6>Features:</h6>
+                <ul>
+                    <li>3.5% Annual Percentage Yield (APY)</li>
+                    <li>FDIC insured up to $250,000</li>
+                    <li>No minimum balance required</li>
+                    <li>Easy access to your funds</li>
+                    <li>Mobile banking available</li>
+                </ul>
+                <h6>Is this right for you?</h6>
+                <p>A high-yield savings account is ideal if you want to earn more interest than a traditional savings account while maintaining easy access to your money. It's great for emergency funds or short-term savings goals.</p>
+                <h6>Potential earnings:</h6>
+                <div class="mb-3">
+                    <label for="highYieldAmount" class="form-label">Enter amount to calculate potential earnings:</label>
+                    <input type="number" class="form-control" id="highYieldAmount" placeholder="Enter amount">
+                </div>
+                <p>Potential earnings after 1 year: $<span id="highYieldEarnings">0.00</span></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Open Account</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Certificate of Deposit (CD) Modal -->
+<div class="modal fade" id="cdModal" tabindex="-1" aria-labelledby="cdModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cdModalLabel">Certificate of Deposit (CD)</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h6>Features:</h6>
+                <ul>
+                    <li>4.0% Annual Percentage Yield (APY) for 12-month term</li>
+                    <li>FDIC insured up to $250,000</li>
+                    <li>Minimum deposit: $1,000</li>
+                    <li>Fixed interest rate for the term</li>
+                    <li>Penalty for early withdrawal</li>
+                </ul>
+                <h6>Is this right for you?</h6>
+                <p>A CD is ideal if you have a lump sum you won't need for a specific period and want to earn a higher, guaranteed interest rate. It's great for medium-term savings goals.</p>
+                <h6>Potential earnings:</h6>
+                <div class="mb-3">
+                    <label for="cdAmount" class="form-label">Enter amount to calculate potential earnings:</label>
+                    <input type="number" class="form-control" id="cdAmount" placeholder="Enter amount (minimum $1,000)">
+                </div>
+                <p>Potential earnings after 12 months: $<span id="cdEarnings">0.00</span></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Open CD Account</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Investment Options Modal -->
+<div class="modal fade" id="investmentModal" tabindex="-1" aria-labelledby="investmentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="investmentModalLabel">Investment Options</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h6>Available Options:</h6>
+                <ul>
+                    <li>Mutual Funds</li>
+                    <li>Exchange-Traded Funds (ETFs)</li>
+                    <li>Individual Stocks</li>
+                    <li>Bonds</li>
+                </ul>
+                <h6>Is this right for you?</h6>
+                <p>Investing in the market can potentially offer higher returns but comes with higher risk. It's generally suitable for long-term goals and those comfortable with market fluctuations.</p>
+                <div class="alert alert-warning" role="alert">
+                    <strong>Important:</strong> Investments are subject to market risks. Past performance does not guarantee future results.
+                </div>
+                <p>For personalized investment advice, please schedule a consultation with our financial advisors.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#consultationModal">Schedule Consultation</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Consultation Modal -->
+<div class="modal fade" id="consultationModal" tabindex="-1" aria-labelledby="consultationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="consultationModalLabel">Schedule a Free Consultation</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="consultName" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="consultName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="consultEmail" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="consultEmail" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="consultPhone" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="consultPhone">
+                    </div>
+                    <div class="mb-3">
+                        <label for="consultDate" class="form-label">Preferred Date</label>
+                        <input type="date" class="form-control" id="consultDate" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="consultTime" class="form-label">Preferred Time</label>
+                        <select class="form-select" id="consultTime" required>
+                            <option value="">Choose a time</option>
+                            <option value="morning">Morning (9AM - 12PM)</option>
+                            <option value="afternoon">Afternoon (1PM - 5PM)</option>
+                            <option value="evening">Evening (6PM - 8PM)</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Schedule Consultation</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Calculate potential earnings for High-Yield Savings Account
+document.getElementById('highYieldAmount').addEventListener('input', function() {
+    const amount = parseFloat(this.value) || 0;
+    const earnings = amount * 0.035;
+    document.getElementById('highYieldEarnings').textContent = earnings.toFixed(2);
+});
+
+// Calculate potential earnings for CD
+document.getElementById('cdAmount').addEventListener('input', function() {
+    const amount = parseFloat(this.value) || 0;
+    const earnings = amount * 0.04;
+    document.getElementById('cdEarnings').textContent = earnings.toFixed(2);
+});
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
